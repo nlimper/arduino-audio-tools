@@ -1,5 +1,6 @@
 #pragma once
 
+#include "AudioTools/CoreAudio/AudioBasic/StrExt.h"
 #include "AudioLogger.h"
 #include "AudioTools/CoreAudio/AudioSource.h"
 #include "AudioTools/AudioLibs/SDDirect.h"
@@ -83,7 +84,7 @@ public:
 
 protected:
   SDDirect<fs::SPIFFSFS,fs::File> idx{SPIFFS};
-  File file;
+  fs::File file;
   size_t idx_pos = 0;
   const char *file_name;
   const char *exension = nullptr;
