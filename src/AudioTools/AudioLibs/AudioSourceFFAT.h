@@ -82,11 +82,7 @@ namespace audio_tools {
 		long size() { return idx.size(); }
 
 	protected:
-#ifdef RP2040_HOWER
-		SDDirect<FS, File> idx{FFat};
-#else
-		SDDirect<FFat, fs::File> idx{FFat};
-#endif
+		SDDirect<FS, File> idx{FFat}; // Use FFat file system
 		File file;
 		size_t idx_pos = 0;
 		const char *file_name;
