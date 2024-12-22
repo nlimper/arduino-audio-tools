@@ -85,7 +85,7 @@ namespace audio_tools {
 #ifdef RP2040_HOWER
 		SDDirect<FS, File> idx{FFat};
 #else
-		SDDirect<fs::FFatFS, fs::File> idx{FFat};
+		SDDirect<FFat, fs::File> idx{FFat};
 #endif
 		File file;
 		size_t idx_pos = 0;
